@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec $PHOENIX_LIB_DIR/bin/sqlline-thin.py "$@"

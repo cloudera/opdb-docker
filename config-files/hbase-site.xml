@@ -1,0 +1,48 @@
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+
+  <property>
+     <name>hbase.zookeeper.quorum</name>
+     <value>opdb-docker</value>
+  </property>
+  <property>
+     <name>hbase.zookeeper.property.dataDir</name>
+     <value>/data/zk</value>
+  </property>
+  <property>
+    <name>hbase.rootdir</name>
+    <value>file:///data/hbase</value>
+  </property>
+
+  <property>
+    <name>hbase.master.info.bindAddress</name>
+    <value>opdb-docker</value>
+  </property>
+
+  <property>
+    <name>hbase.regionserver.info.bindAddress</name>
+    <value>opdb-docker</value>
+  </property>
+  <property>
+    <name>hbase.unsafe.stream.capability.enforce</name>
+    <value>false</value>
+  </property>
+  <property>
+      <name>hbase.cluster.distributed</name>
+      <value>true</value>
+    </property>
+
+  <property>
+    <name>hbase.regionserver.wal.codec</name>
+    <value>org.apache.hadoop.hbase.regionserver.wal.IndexedWALEditCodec</value>
+  </property>
+  <property>
+    <name>phoenix.schema.isNamespaceMappingEnabled</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>phoenix.transactions.enabled</name>
+    <value>true</value>
+  </property>
+
+</configuration>
