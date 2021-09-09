@@ -1,4 +1,4 @@
-# HBase in Docker
+# HBase, Phoenix and Omid in Docker
 
 
 # http://docs.docker.io/en/latest/use/builder/
@@ -69,5 +69,8 @@ EXPOSE 16010
 EXPOSE 16000
 # Regions servers
 EXPOSE 16020
+#Regionserver UI
+EXPOSE 16030
+
 
 ENTRYPOINT ["/opt/opdb-start"]

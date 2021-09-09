@@ -1,4 +1,4 @@
-OPDB Docker
+# OPDB Docker
 ===============
 
 This configuration builds a docker container to run HBase,
@@ -16,13 +16,13 @@ and add
     127.0.0.1       localhost opdb-docker
 
 
-The docker runs on the following resource settings:
+It is recommended to run the container with at least the following resources:
 * CPUs: 6
 * Memory: 10 GB
 * Swap: 1.5 GB
 * Disk image size: 64 GB
 
-Setting smaller amounts may cause issues with Omid.
+Setting smaller amounts may cause issues with memory allocation.
 
 Build Image
 -----------
@@ -56,7 +56,7 @@ or
 
     $ docker exec opdb-docker /opt/hbase/bin/hbase-daemon.sh start rest
 
-Similarly You can end them with:
+Similarly You can stop them with:
 
     $ docker exec opdb-docker /opt/hbase/bin/hbase-daemon.sh stop thrift
 

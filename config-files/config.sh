@@ -20,7 +20,7 @@ minimal_apt_get_args='-y --no-install-recommends'
 
 HBASE_BUILD_PACKAGES="curl ca-certificates"
 PHOENIX_BUILD_PACKAGES="ca-certificates net-tools vim python less ssh"
-OMID_BUILD_PACKEGES="maven"
+OMID_BUILD_PACKEGES="maven git openjdk-8-jdk"
 
 # Core list from docs
 #HBASE_BUILD_PACKAGES="$HBASE_BUILD_PACKAGES "

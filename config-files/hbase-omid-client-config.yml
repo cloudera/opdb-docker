@@ -1,8 +1,3 @@
-# Secure HBase credentials, core-site.xml and hbase-site.xml are expected to be in the classpath
-# It's used for secure HBase only and ignored otherwise
-# principal: omid_hbase_client
-# keytab: /path/to/hbase/client/keytab
-
 omidClientConfiguration: !!org.apache.omid.tso.client.OmidClientConfiguration
   connectionString: "opdb-docker:54758"
 

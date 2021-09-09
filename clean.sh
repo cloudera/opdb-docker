@@ -10,7 +10,6 @@ AUTO_ADDED_PACKAGES=`apt-mark showauto`
 # Install the run-time dependencies
 apt-get install $minimal_apt_get_args $HBASE_RUN_PACKAGES
 
-# . /build/cleanup.sh
 rm -rf /tmp/* /var/tmp/*
 
 apt-get clean
