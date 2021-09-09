@@ -69,7 +69,7 @@ EXPOSE 16010
 EXPOSE 16000
 # Regions servers
 EXPOSE 16020
-#Regionserver UI
+# Regionserver UI
 EXPOSE 16030
 
 
