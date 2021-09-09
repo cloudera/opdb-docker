@@ -1,0 +1,13 @@
+omidClientConfiguration: !!org.apache.omid.tso.client.OmidClientConfiguration
+  connectionString: "opdb-docker:54758"
+
+metrics: !!org.apache.omid.metrics.CodahaleMetricsProvider [
+  !!org.apache.omid.metrics.CodahaleMetricsConfig {
+    outputFreqInSecs: 15,
+    reporters: !!set {
+      !!org.apache.omid.metrics.CodahaleMetricsConfig$Reporter CSV
+    },
+    csvDir: "csvMetrics",
+    prefix: "somePrefix",
+  }
+]
