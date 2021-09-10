@@ -42,7 +42,7 @@ You can log in to the docker and run Phoenix or Hbase
 
     $ phoenix-sqlline
 
-    $ ./opt/hbase/bin/hbase shell
+    $ hbase shell
 
 
 Thrift and REST server
