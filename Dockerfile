@@ -1,4 +1,4 @@
-# HBase, Phoenix and Omid in Docker
+# Apache HBase, Apache Phoenix and Apache Omid in Docker
 
 
 # http://docs.docker.io/en/latest/use/builder/
@@ -7,7 +7,6 @@ FROM ubuntu:bionic
 
 COPY *.sh /build/
 COPY */*.sh /build/
-
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 ENV HBASE_VERSION 2.4.5
@@ -27,39 +26,33 @@ VOLUME /data
 
 ADD ./config-files/changes.patch /changes.patch
 
-RUN /build/prepare-omid.sh
 RUN /build/prepare-hbase.sh
 RUN /build/prepare-phoenix.sh
+RUN /build/prepare-omid.sh
 RUN cd /opt/hbase && /build/build-hbase.sh
 RUN cd / && /build/build-phoenix.sh
 RUN /build/build-omid.sh
 
 ADD ./config-files/hbase-site.xml /opt/hbase/conf/hbase-site.xml
-
 ADD ./config-files/hbase-site.xml /opt/phoenix/hbase-site.xml
-
 ADD ./config-files/zoo.cfg /opt/hbase/conf/zoo.cfg
-
 ADD ./config-files/hbase-omid-client-config.yml /opt/hbase/conf/hbase-omid-client-config.yml
-
 ADD ./opdb-start /opt/opdb-start
-
 ADD ./phoenix/phoenix-sqlline /bin/phoenix-sqlline
-
 ADD ./phoenix/phoenix-sqlline-thin /bin/phoenix-sqlline-thin
 
 RUN /build/clean.sh
 RUN rm -rf /build
 
-# REST API
+# HBase REST API
 EXPOSE 8080
-# REST Web UI at :8085/rest.jsp
+# HBase REST Web UI at :8085/rest.jsp
 EXPOSE 8085
-# Phoenix querry server
+# Phoenix querry server
 EXPOSE 8765
-# Thrift API
+# HBase Thrift API
 EXPOSE 9090
-# Thrift Web UI at :9095/thrift.jsp
+# HBase Thrift Web UI at :9095/thrift.jsp
 EXPOSE 9095
 # HBase's Embedded zookeeper cluster
 EXPOSE 2181

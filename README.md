@@ -1,8 +1,7 @@
 # OPDB Docker
 ===============
 
-This configuration builds a docker container to run HBase,
-Zookeeper, Omid and Apache Phoenix.
+This configuration builds a docker container to run Apache HBase, Apache Zookeeper, Apache Omid and Apache Phoenix.
 
 
 Before you begin
@@ -35,7 +34,7 @@ Run OPDB docker
 
     $ docker run -p 8765:8765 -p 8080:8080 -p 8085:8085 -p 9090:9090 -p 9095:9095 -p 2181:2181 -p 16010:16010 -p 16020:16020 -p 16000:16000 -p 16030:16030 -d -h "opdb-docker"  --name opdb-docker opdb-docker
 
-You can log in to the docker and run Phoenix or Hbase
+You can log in to the docker and run Apache Phoenix or Apache Hbase
 ---------
 
     $ docker exec -it opdb-docker /bin/bash

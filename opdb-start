@@ -4,15 +4,15 @@ logs_dir=/data/logs
 # Prepare environment
 mkdir -p $logs_dir /data/hbase /data/run
 
-#start hbase
+# Start Apache HBase
 /opt/hbase/bin/start-hbase.sh 2>&1
 
-#start omid
+# Start Apache Omid
 /opt/omid/bin/omid.sh create-hbase-commit-table 2>&1
 /opt/omid/bin/omid.sh create-hbase-timestamp-table 2>&1
 JVM_FLAGS=-Xmx3221225472 /opt/omid/bin/omid.sh tso 2>&1  &
 
-#start phoenix
+# Start Apache Phoenix Query Server
 /opt/phoenix/bin/queryserver.py 2>&1 &
 phoenix_pid="$!"
 
