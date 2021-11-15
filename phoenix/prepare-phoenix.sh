@@ -11,6 +11,6 @@ curl -SL $PHOENIX_DIST/phoenix-$PHOENIX_VERSION/phoenix-hbase-$HBASE_PHOENIX_VER
 
 mv phoenix-hbase-$HBASE_PHOENIX_VERSION-$PHOENIX_VERSION-bin phoenix
 
-curl -SL https://apache.claz.org/phoenix/phoenix-queryserver-$QUERYSERVER_VERSION/phoenix-queryserver-$QUERYSERVER_VERSION-bin.tar.gz | tar -x -z
+curl -SL $PHOENIX_DIST/phoenix-queryserver-$QUERYSERVER_VERSION/phoenix-queryserver-$QUERYSERVER_VERSION-bin.tar.gz | tar -x -z
 
 cp -R phoenix-queryserver-*/* phoenix
