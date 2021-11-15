@@ -1,8 +1,10 @@
-#/bin/bash!
-  
+#!/bin/sh -xe
+
+. /build/config.sh
+
 cd /opt
 
-curl -SL https://apache.claz.org/phoenix/phoenix-omid-$OMID_VERSION/phoenix-omid-$OMID_VERSION-src.tar.gz | tar -x -z
+curl -SL $PHOENIX_DIST/phoenix-omid-$OMID_VERSION/phoenix-omid-$OMID_VERSION-src.tar.gz | tar -x -z
 
 cd phoenix-omid-$OMID_VERSION/tso-server
 

@@ -3,7 +3,7 @@
 # . /build/config.sh
 
 # This is the definitive site and incredibly slow
-HBASE_DIST="https://apache.claz.org/hbase"
+HBASE_DIST="https://archive.apache.org/dist/hbase"
 # This is a mirror site and faster but every new release breaks all
 # existing links.
 # HBASE_DIST="https://www-us.apache.org/dist/hbase"
@@ -30,4 +30,4 @@ OMID_BUILD_PACKEGES="maven git openjdk-8-jdk"
 
 ## Run time dependencies ##
 HBASE_RUN_PACKAGES="openjdk-8-jre-headless"
-PHOENIX_DIST="https://downloads.apache.org/phoenix/"
+PHOENIX_DIST="https://archive.apache.org/dist/phoenix"
