@@ -1,12 +1,20 @@
+# Copyright 2021 Cloudera, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 # This file intended to be sourced
 
-# . /build/config.sh
-
-# This is the definitive site and incredibly slow
 HBASE_DIST="https://archive.apache.org/dist/hbase"
-# This is a mirror site and faster but every new release breaks all
-# existing links.
-# HBASE_DIST="https://www-us.apache.org/dist/hbase"
 
 # Prevent initramfs updates from trying to run grub and lilo.
 export INITRD=no
